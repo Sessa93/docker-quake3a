@@ -1,0 +1,11 @@
+version: '3.7'
+
+services:
+  quake:
+    image: docker-quake
+    restart: unless-stopped
+    ports:
+      - 0.0.0.0:27960:27960/udp
+    volumes:
+      - ./pak0.pk3:/pak0.pk3
+      - ./server.cfg:/home/ioq3srv/.q3a/baseq3/server.cfg
